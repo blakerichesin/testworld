@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Vibe Website</title>
+  <title>Research Team Website!</title>
   <style>
-    /* Reset some defaults */
     * {
       margin: 0;
       padding: 0;
@@ -16,40 +15,51 @@
       font-family: Arial, sans-serif;
     }
 
-    /* The fixed top nav bar container */
+    /* Fixed top nav bar */
     .top-nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background-color: rgba(255, 255, 255, 0.95);
-      /* Slight transparency so hero might peek through if desired */
       border-bottom: 1px solid #ccc;
       z-index: 1000;
       display: flex;
       align-items: center;
-      padding: 10px 20px;
-    }
-    .top-nav .logo {
-      flex: 1;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .top-nav nav {
-      /* container for dropdowns or links */
-    }
-    .top-nav select {
-      margin-left: 15px;
-      padding: 5px;
-      font-size: 16px;
+      justify-content: space-between;
+      padding: 10px 40px;
     }
 
-    /* Hero section with background image */
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Navigation buttons */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s, color 0.3s;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    /* Hero section */
     .hero {
-      /* full viewport height minus nav height (approx) */
       height: 60vh;
-      /* Adjust as you like */
-      background-image: url('https://i.pinimg.com/1200x/a2/67/76/a26776ac13bf650b0b65e3dcc642ccee.jpg');
+      background-image: url('https://www.sketchappsources.com/resources/source-image/nyan-cat-artoctober.png'); 
       background-size: cover;
       background-position: center;
       display: flex;
@@ -58,10 +68,10 @@
       text-align: center;
       color: white;
       position: relative;
-      margin-top: 50px; /* give room for fixed nav (adjust if nav is taller) */
+      margin-top: 60px; /* offset for fixed nav */
     }
+
     .hero::after {
-      /* a dark overlay so white text is readable */
       content: "";
       position: absolute;
       top: 0; left: 0;
@@ -69,29 +79,33 @@
       height: 100%;
       background: rgba(0,0,0,0.4);
     }
-    .hero .hero-content {
+
+    .hero-content {
       position: relative;
       z-index: 1;
     }
-    .hero .hero-title {
+
+    .hero-title {
       font-size: 3em;
       margin-bottom: 0.3em;
     }
-    .hero .hero-subtitle {
+
+    .hero-subtitle {
       font-size: 1.5em;
     }
 
-    /* Main content section below hero */
+    /* Main content */
     .main-content {
       background-color: white;
       padding: 40px 20px;
-      /* If hero overlaps this, you can use negative margin etc */
     }
+
     .main-content h2 {
       font-size: 24px;
       margin-bottom: 20px;
       text-align: center;
     }
+
     .main-content p {
       font-size: 18px;
       color: #333;
@@ -103,24 +117,18 @@
 </head>
 <body>
 
-  <!-- Fixed nav bar -->
+  <!-- Fixed Navigation -->
   <div class="top-nav">
     <div class="logo">My Site Logo or Name</div>
-    <nav>
-      <select onchange="if (this.value) location = this.value;">
-        <option value="#">Menu 1</option>
-        <option value="page1.html">Page 1</option>
-        <option value="page2.html">Page 2</option>
-      </select>
-      <select onchange="if (this.value) location = this.value;">
-        <option value="#">Menu 2</option>
-        <option value="about.html">About</option>
-        <option value="contact.html">Contact</option>
-      </select>
-    </nav>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+    </div>
   </div>
 
-  <!-- Hero / header image section -->
+  <!-- Hero Section -->
   <div class="hero">
     <div class="hero-content">
       <div class="hero-title">Header test</div>
@@ -128,7 +136,7 @@
     </div>
   </div>
 
-  <!-- Main content area -->
+  <!-- Main Content -->
   <div class="main-content">
     <h2>Smaller Title Below the Picture</h2>
     <p>This is testing for a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo id dolor sed lacinia.</p>
