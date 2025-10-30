@@ -13,6 +13,7 @@
     body, html {
       height: 100%;
       font-family: Arial, sans-serif;
+      background-color: white;
     }
 
     /* Fixed top nav bar */
@@ -56,42 +57,20 @@
       color: white;
     }
 
-    /* Hero section */
-    .hero {
-      height: 60vh;
-      background-image: url('HCNS_logo1.png'); 
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
+    /* Image banner section */
+    .image-banner {
       margin-top: 60px; /* offset for fixed nav */
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
       width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
+      display: flex;
+      justify-content: center;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #ccc;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-title {
-      font-size: 3em;
-      margin-bottom: 0.3em;
-    }
-
-    .hero-subtitle {
-      font-size: 1.5em;
+    .image-banner img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
     }
 
     /* Main content */
@@ -101,7 +80,7 @@
     }
 
     .main-content h2 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 20px;
       text-align: center;
     }
@@ -109,9 +88,9 @@
     .main-content p {
       font-size: 18px;
       color: #333;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -127,32 +106,32 @@
     </div>
   </div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div class="hero-content">
-      <div class="hero-title">Header test</div>
-    </div>
+  <!-- Image Banner -->
+  <div class="image-banner">
+    <img src="HCNS_logo1.png" alt="Hubble Census of Nearby Satellites Banner">
   </div>
 
   <!-- Main Content -->
   <div class="main-content">
     <h2>About</h2>
-    <p>Low-mass galaxies provide a crucial means to test the predictions of cosmological models on small scales
-where they have frequently struggled to match observations. However, the most detailed comparisons have
-relied almost exclusively on the satellite galaxies in the Local Group (LG) as this was, until recently, the only
-system with a high level of completeness at low mass and surface brightness. Here we propose a complete
-census of ALL satellite galaxies (M_V < -9) within MW-like systems out to 10 Mpc. We request 149 orbits to
-image 149 of these satellites, as well as support to incorporate 111 targets with existing HST observations.
-Together these observations make up a volume-limited sample of 260 satellites around 22 MW-like hosts. This
-data set will allow an unbiased characterization of the properties of MW-like satellite systems and end our over-
-reliance on the LG as the one point of detailed comparison with simulations. Among many other science goals,
-the  observations  and  analysis  that  we  propose  will  allow:  1)  the  most  robust  measurement  of  the  satellite
-luminosity function to date, 2) the determination of the globular cluster luminosity function in a lower galaxy
-mass regime than ever before, and 3) measurements of the star formation histories and quenching times of an
-unprecedented sample of satellites. Only in the past few years has a project of this scope become possible, as
-previously the target samples did not exist, and it is only possible with space-based observations. The data
-products of this program will be fundamental to all studies, both theoretical and observational, of low-mass
-satellites for the next decade or more.</p>
+    <p>
+      Low-mass galaxies provide a crucial means to test the predictions of cosmological models on small scales
+      where they have frequently struggled to match observations. However, the most detailed comparisons have
+      relied almost exclusively on the satellite galaxies in the Local Group (LG) as this was, until recently, the only
+      system with a high level of completeness at low mass and surface brightness. Here we propose a complete
+      census of ALL satellite galaxies (M_V < -9) within MW-like systems out to 10 Mpc. We request 149 orbits to
+      image 149 of these satellites, as well as support to incorporate 111 targets with existing HST observations.
+      Together these observations make up a volume-limited sample of 260 satellites around 22 MW-like hosts. This
+      data set will allow an unbiased characterization of the properties of MW-like satellite systems and end our over-
+      reliance on the LG as the one point of detailed comparison with simulations. Among many other science goals,
+      the observations and analysis that we propose will allow: 1) the most robust measurement of the satellite
+      luminosity function to date, 2) the determination of the globular cluster luminosity function in a lower galaxy
+      mass regime than ever before, and 3) measurements of the star formation histories and quenching times of an
+      unprecedented sample of satellites. Only in the past few years has a project of this scope become possible, as
+      previously the target samples did not exist, and it is only possible with space-based observations. The data
+      products of this program will be fundamental to all studies, both theoretical and observational, of low-mass
+      satellites for the next decade or more.
+    </p>
   </div>
 
 </body>
