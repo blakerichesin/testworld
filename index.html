@@ -68,9 +68,11 @@
     }
 
     .image-banner img {
-      width: 100%;
-      max-height: 450px;
-      object-fit: cover;
+      width: auto;         /* keep original width ratio */
+      height: auto;        /* no distortion */
+      max-width: 100%;     /* prevent overflow on smaller screens */
+      display: block;      /* remove gaps */
+      margin: 0 auto;      /* center the image */
     }
 
     /* Main content */
@@ -103,6 +105,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
     </div>
   </div>
 
