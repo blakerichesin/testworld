@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project PDF</title>
+  <title>Publications</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+    /* Top nav bar */
     .top-nav {
       position: fixed;
       top: 0;
@@ -22,15 +30,18 @@
       justify-content: space-between;
       padding: 10px 40px;
     }
+
     .logo {
       font-size: 22px;
       font-weight: bold;
       color: #333;
     }
+
     .nav-links {
       display: flex;
       gap: 20px;
     }
+
     .nav-links a {
       text-decoration: none;
       color: #333;
@@ -39,16 +50,20 @@
       transition: background-color 0.3s, color 0.3s;
       font-weight: 500;
     }
+
     .nav-links a:hover {
       background-color: #333;
       color: white;
     }
+
+    /* PDF container */
     .pdf-container {
-      margin-top: 80px; /* offset for navbar */
+      margin-top: 100px; /* offset for navbar */
       display: flex;
       justify-content: center;
       padding: 20px;
     }
+
     iframe {
       width: 90%;
       height: 90vh;
@@ -59,6 +74,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <div class="top-nav">
     <div class="logo">HCNS</div>
     <div class="nav-links">
